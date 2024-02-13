@@ -52,8 +52,8 @@ void print_vector(std::vector<int>& vec_)
 int main()
 {
     // test 1
-    std::vector<int>nums1 = {2,5,7,0,0,0,0};
-    std::vector<int>nums2 = {3,5,6,9};
+    std::vector<int>nums1 = {2, 5, 7, 0, 0, 0, 0};
+    std::vector<int>nums2 = {3, 5, 6, 9};
     int size1 = 3;
     int size2 = 4;
     merge(nums1, size1, nums2, size2);
