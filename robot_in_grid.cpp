@@ -11,7 +11,7 @@
 #include <iostream> // cout
 #include <vector> // vector
 
-int MoveOne(std::vector<std::vector<int>>& grid_, int rows_, int cols_)
+int move_one(std::vector<std::vector<int>>& grid_, int rows_, int cols_)
 {
     if (rows_ < 0 || cols_ < 0 || (-1 == grid_[rows_][cols_]))
     {
@@ -23,28 +23,28 @@ int MoveOne(std::vector<std::vector<int>>& grid_, int rows_, int cols_)
         return 1;
     }
 
-    int ret = MoveOne(grid_, rows_ - 1, cols_);
+    int ret = move_one(grid_, rows_ - 1, cols_);
     if (ret)
     {
         grid_[rows_][cols_] = ret;
         return ret;
     }
-    ret = MoveOne(grid_, rows_, cols_ - 1);
+    ret = move_one(grid_, rows_, cols_ - 1);
     grid_[rows_][cols_] = ret;
     return ret;
 }
 
-void GridRobot(std::vector<std::vector<int>>& grid_)
+void grid_robot(std::vector<std::vector<int>>& grid_)
 {
     int rows_ = grid_.size();
     int cols_ = grid_[0].size();
-    int left = MoveOne(grid_, rows_-1, cols_ - 2);
+    int left = move_one(grid_, rows_-1, cols_ - 2);
     if (left)
     {
         std::cout << "Success." << std::endl;
         return;
     }
-    int up = MoveOne(grid_, rows_ - 2, cols_ - 1);
+    int up = move_one(grid_, rows_ - 2, cols_ - 1);
     if (up)
     {
         std::cout << "Success." << std::endl;
@@ -81,7 +81,7 @@ void GridRobot(std::vector<std::vector<int>>& grid_)
                                             {-1, -1, 0, -1, -1},
                                             {0, 0, 0, 0, 0}};
     std::cout << "Trying grid 1: " << std::endl;
-    GridRobot(grid_1);
+    grid_robot(grid_1);
     print_grid(grid_1);
 
     // test 2
@@ -91,7 +91,7 @@ void GridRobot(std::vector<std::vector<int>>& grid_)
                                             {-1, -1, 0, -1, -1},
                                             {0, 0, 0, 0, 0}};
     std::cout << "Trying grid 2: " << std::endl;
-    GridRobot(grid_2);
+    grid_robot(grid_2);
     print_grid(grid_2);
     
     return 0;
