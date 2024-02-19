@@ -56,7 +56,7 @@ int main()
     node2 = new Node (8);
     Node *node3 = new Node (3);
     Node *node4 = new Node (4, node1, node2);
-    root = new Node(6, node3, node4);
+    root = new Node (6, node3, node4);
     std::cout << is_valid_bst(root) << std::endl;
     delete node1;
     delete node2;
