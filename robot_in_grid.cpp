@@ -56,7 +56,7 @@ void grid_robot(std::vector<std::vector<int>>& grid_)
 
  // SIMPLE TESTS:
 
- void print_grid(std::vector<std::vector<int>>& grid_)
+void print_grid(std::vector<std::vector<int>>& grid_)
 {
     size_t rows = grid_.size();
     size_t cols = grid_[0].size();
