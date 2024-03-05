@@ -12,15 +12,15 @@
 
 void rotate(std::vector<std::vector<int>>& matrix_)
 {
-    int size = matrix_.size();
-    for (int i = 0; i < size; ++i)
+    size_t size = matrix_.size();
+    for (size_t i = 0; i < size; ++i)
     {
-        for (int j = 0; j < i; ++j)
+        for (size_t j = 0; j < i; ++j)
         {
             std::swap(matrix_[i][j], matrix_[j][i]);
         }
     }
-    for (int i = 0; i < size; ++i)
+    for (size_t i = 0; i < size; ++i)
     {
         std::reverse(matrix_[i].begin(), matrix_[i].end());
     }
@@ -63,4 +63,4 @@ int main()
     print_grid(img2);
 
     return 0;
-}    
+}
