@@ -23,7 +23,6 @@ void replace_spaces(std::string& str_)
 }
 
 
-
 // SIMPLE TESTS:
 
 int main()
