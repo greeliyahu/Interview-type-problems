@@ -1,17 +1,18 @@
 // PROBLEM:
 /*
-    Given an array nums of length n and a number x, check whether there are two elements in nums whose sum is exactly x. 
+    Given an array nums of length n and a number x, check whether there are two elements in nums whose sum is exactly x.
+    Return the indices of those elements if they exist.
 */
 
 
 // SOLUTION:
 
 #include <iostream> // cout
-#include <map> // map
+#include <unordered_map> // unordered_map
 
 std::pair<int, int> two_sum(int nums_[], int n_, int x_)
 {
-    std::map<int, int> map;
+    std::unordered_map<int, int> map;
     for(int i = 0; i < n_; ++i)
     {
         auto const found = map.find(x_ - nums_[i]);

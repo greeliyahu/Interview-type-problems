@@ -27,6 +27,22 @@ int smallest_missing(std::vector<int>& nums_)
 }
 
 
+
+/*int solution(vector<int> &A)
+{
+    std::sort(A.begin(), A.end());
+    size_t size = A.size();
+    int max = 0;
+    for (size_t i = 0; i < size; ++i)
+    {
+        if (A[i] == max + 1)
+        {
+            ++max;
+        }
+    }
+    return max + 1;
+}*/
+
 // SIMPLE TESTS:
 
 int main()

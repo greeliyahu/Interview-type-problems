@@ -46,5 +46,9 @@ int main()
     std::vector<int>nums2 = {3, 3, 2, 2, 2, 3, 3};
     std::cout << majority_element(nums2) << std::endl;
 
+    // test 3
+    std::vector<int>nums3 = {3, 3, 3, 2, 1, 5};
+    std::cout << majority_element(nums3) << std::endl;
+
     return 0;
 }
